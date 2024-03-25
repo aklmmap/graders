@@ -21,5 +21,11 @@ from gradeapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('info/', views.index, name='index')
+    path('info/', views.index, name='index'),
+    path('questions/', views.question_list, name='question_list'),
+    path('create_exam/', views.create_exam, name='create_exam'),
+    path('exams/', views.exam_list, name='exam_list'),
+    path('exam/<int:exam_id>/', views.exam_detail, name='exam_detail'),
+    path('exam/<int:exam_id>/submit/', views.submit_answers, name='submit_answers'),
+    # path('load/', views.read_csv_to_list,name='load')
 ]
