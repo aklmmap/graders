@@ -27,5 +27,12 @@ urlpatterns = [
     path('exams/', views.exam_list, name='exam_list'),
     path('exam/<int:exam_id>/', views.exam_detail, name='exam_detail'),
     path('exam/<int:exam_id>/submit/', views.submit_answers, name='submit_answers'),
-    # path('load/', views.read_csv_to_list,name='load')
+    path('teacher/dashboard/', views.teacher_dashboard, name='teacher_dashboard'),
+    path('view_scoresheet/', views.view_scoresheet, name='view_scoresheet'),
+    path('view_exams/', views.view_exams, name='view_exams'),
+    path('view_students/<int:exam_id>/', views.view_students, name='view_students'),
+    path('view_questions/<int:exam_id>/<int:user_id>/', views.view_questions, name='view_questions'),
+    path('view-questions-answers/<int:exam_id>/<int:user_id>/', views.view_questions_answers, name='view_questions_answers'),
+    path('login/', views.user_login, name='login'),
+    path('student_dashboard/', views.student_exam_list, name='student_dashboard'),
 ]
